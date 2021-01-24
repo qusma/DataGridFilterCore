@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGridFilterLibraryCore", "DataGridFilterLibraryCore\DataGridFilterLibraryCore.csproj", "{043D9D19-6685-4D53-9BA2-1B2277BB7D80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release with Code Analysis|Any CPU = Release with Code Analysis|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{043D9D19-6685-4D53-9BA2-1B2277BB7D80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{043D9D19-6685-4D53-9BA2-1B2277BB7D80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{043D9D19-6685-4D53-9BA2-1B2277BB7D80}.Release with Code Analysis|Any CPU.ActiveCfg = Release|Any CPU
+		{043D9D19-6685-4D53-9BA2-1B2277BB7D80}.Release with Code Analysis|Any CPU.Build.0 = Release|Any CPU
+		{043D9D19-6685-4D53-9BA2-1B2277BB7D80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{043D9D19-6685-4D53-9BA2-1B2277BB7D80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82BEC323-8F0F-4038-92DE-3FB3335F7A42}
+	EndGlobalSection
+EndGlobal

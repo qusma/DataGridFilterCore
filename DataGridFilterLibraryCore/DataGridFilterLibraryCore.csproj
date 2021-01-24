@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks> <!--net5.0-windows-->
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>DataGridFilterLibrary</RootNamespace>
+    <DefaultItemExcludes>Themes\*</DefaultItemExcludes>
+    
+    <AssemblyName>DataGridFilterCore</AssemblyName>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+    <PackageId>DataGridFilterCore</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>QUSMA</Authors>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Description>Drop-in filtering UI for WPF datagrids</Description>
+    <Summary>Drop-in filtering UI for WPF datagrids</Summary>
+    <PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>
+  </PropertyGroup>
+
+
+
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DataGridHeaderFilterControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  
+  <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+    </ItemGroup>
+  </Target>
+
+</Project>
